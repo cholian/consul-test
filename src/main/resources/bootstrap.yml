@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    consul:
+      config:
+        fast-fail: true
+      host: localhost
+      port: 8500
+  application:
+    name: payment
+
+#spring:
+#  application:
+#    name: payment
+#
+#spring.profiles.active: local
+#
+#---
+#spring:
+#  profiles: local
+#  cloud:
+#    consul:
+#      host: localhost
+#      port: 8500
+#      config:
+#        format: FILES
+#        prefix: config
+#        watch:
+#          delay: 1000
+#
+#      discovery:
+#        instanceId: ${spring.application.name}:${server.port}
+#        healthCheckPath: /healthcheck
+#        healthCheckInterval: 20s
